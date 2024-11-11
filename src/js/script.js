@@ -1,7 +1,7 @@
 'use strict';
 import {account, accounts, createAccount, generateUsernames } from './accounts-data.js';
 generateUsernames(accounts);
-console.log(accounts);
+// console.log(accounts);
 ///////////////////////////////////////
 // Modal window
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -42,14 +42,14 @@ const formSubmitHandler = function(e) {
   e.stopPropagation();
   formData.firstName = document.querySelector('#first-name').value;
   formData.lastName = document.querySelector('#last-name').value;
-  console.log(formData);
+  // console.log(formData);
   if (!validateFields()) {
     errorMessage();
     return;
   }
   const newAccount = createAccount(formData.firstName, formData.lastName);
   successMessage(newAccount);
-  console.log(accounts)
+  // console.log(accounts)
 };
 const validateFields = function() {
   const firstNameField = document.querySelector('#first-name').value;
@@ -175,7 +175,7 @@ nav.addEventListener('mouseout', handlingHover.bind(1));
 const initialCoords = section1.getBoundingClientRect();
 // console.log(initialCoords);
 window.addEventListener('scroll', function() {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if (window.scrollY > initialCoords.top) {
     nav.classList.add('sticky');
   } else {
@@ -186,7 +186,7 @@ window.addEventListener('scroll', function() {
 //Intersection, observer API
 const obsCallback = function(entries, observer) {
   entries.forEach(entry => {
-    console.log(entry);
+    // console.log(entry);
   });
 };
 const obsOptions = {
